@@ -5,7 +5,7 @@
     git clone --bare https://github.com/hangarlabs/base-laravel4-admin.git
     # Make a bare clone of the repository
 
-    cd base-drupal-singlesite.git
+    cd base-laravel4-admin.git
     git push --mirror https://github.com/hangarcr/new-repository.git
     # Mirror-push to the new repository
 

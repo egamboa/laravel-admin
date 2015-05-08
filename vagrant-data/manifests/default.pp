@@ -41,3 +41,13 @@ class { 'mysql' :
 }
 	
 class { 'sendmail' : }
+
+class { 'composer':
+  command_name => 'composer',
+  target_dir   => '/usr/local/bin', 
+  auto_update => true, 
+  stage => last,
+}
+
+stage { 'last': }
+Stage['main'] -> Stage['last']
