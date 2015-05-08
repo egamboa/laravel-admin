@@ -42,6 +42,9 @@ class { 'mysql' :
 	
 class { 'sendmail' : }
 
+stage { 'last': }
+Stage['main'] -> Stage['last']
+
 class { 'composer':
   command_name => 'composer',
   target_dir   => '/usr/local/bin', 
@@ -49,5 +52,3 @@ class { 'composer':
   stage => last,
 }
 
-stage { 'last': }
-Stage['main'] -> Stage['last']
