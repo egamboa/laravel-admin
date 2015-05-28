@@ -92,7 +92,7 @@ class AdminServiceProvider extends ServiceProvider {
     {
         $this->app->booted(function ()
         {
-            $this->app['events']->fire('admin::routes'); 
+            // $this->app['events']->fire('admin::routes'); 
         });   
     }
 
